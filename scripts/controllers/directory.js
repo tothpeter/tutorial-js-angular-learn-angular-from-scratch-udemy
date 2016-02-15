@@ -1,22 +1,24 @@
 'use strict';
 
 angular.module('directoryApp')
-.controller('directoryCtrl', function($scope) {
-  $scope.list = [
+.controller('directoryCtrl', function() {
+
+  var dirList = this;
+  dirList.list = [
     {name: 'Toma', age: 22},
     {name: 'Kalina Tech', age: 12},
     {name: 'Ben', age: 11}
   ];
 
-  $scope.addPerson = function() {
+  dirList.addPerson = function() {
     var newPerson = {
-      name: $scope.name,
-      age: $scope.age
+      name: dirList.name,
+      age: dirList.age
     }
 
-    $scope.list.push(newPerson)
+    dirList.list.push(newPerson)
 
-    $scope.name = "";
-    $scope.age = "";
+    dirList.name = "";
+    dirList.age = "";
   };
 });
