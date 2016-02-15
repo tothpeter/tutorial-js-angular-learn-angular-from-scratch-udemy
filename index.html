@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="directoryApp">
 <head>
   <meta charset="UTF-8">
   <title>AngularJS For Everyone</title>
   <link rel="stylesheet" href="styles/main.css">
 </head>
-<body ng-init="list = [{name: 'Toma', age: 22}, {name: 'Kalina Tech', age: 12}, {name: 'Ben', age: 11} ]">
+<body ng-controller="directoryCtrl">
   <input type="text" ng-model="search">
   <ul>
     <li ng-repeat="item in list | filter: search">{{item.name}} ({{item.age}})</li>
@@ -13,5 +13,6 @@
 
   <script src="vendor/js/angular.min.js" type="text/javascript"></script>
   <script src="scripts/app.js" type="text/javascript"></script>
+  <script src="scripts/controllers/directory.js" type="text/javascript"></script>
 </body>
 </html>
