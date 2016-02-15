@@ -1,0 +1,13 @@
+.over-thirty {
+  background: red;
+  color: #fff;
+}
+
+.under-thirty {
+  background: blue;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}

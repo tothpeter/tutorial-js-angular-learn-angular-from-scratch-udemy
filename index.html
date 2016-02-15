@@ -7,11 +7,13 @@
 </head>
 <body ng-controller="directoryCtrl as dirList">
   <input type="text" ng-model="search">
-  <ul>
-    <li ng-repeat="item in dirList.list | filter: search | orderBy:'-age' | limitTo:2" class="">
-      {{item.name}} ({{item.age | currency:'£':1}})
+  <ul ng-class="{'hidden': !dirList.toggle}">
+    <li ng-repeat="item in dirList.list | filter: search" ng-class="item.age > 29 ? 'over-thirty' : 'under-thirty'">
+      {{item.name}} ({{item.age}})
     </li>
   </ul>
+
+  <button ng-click="dirList.toggle = true">Show Names</button>
 
 
   <form ng-submit="dirList.addPerson()">
