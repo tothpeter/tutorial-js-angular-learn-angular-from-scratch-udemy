@@ -8,7 +8,9 @@
 <body ng-controller="directoryCtrl as dirList">
   <input type="text" ng-model="search">
   <ul>
-    <li ng-repeat="item in dirList.list | filter: search">{{item.name}} ({{item.age}})</li>
+    <li ng-repeat="item in dirList.list | filter: search | orderBy:'-age' | limitTo:2" class="">
+      {{item.name}} ({{item.age | currency:'£':1}})
+    </li>
   </ul>
 
 
