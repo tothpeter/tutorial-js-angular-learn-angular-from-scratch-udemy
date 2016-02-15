@@ -5,10 +5,12 @@
   <title>AngularJS For Everyone</title>
   <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
-  <input type="text" ng-model="yourName" placeholder="Enter your name">
-  <h1>{{yourName}}</h1>
+<body ng-init="list = [{name: 'Toma', age: 22}, {name: 'Kalina Tech', age: 12} ]">
+  <ul>
+    <li ng-repeat="item in list">{{item.name}} ({{item.age}})</li>
+  </ul>
 
   <script src="vendor/js/angular.min.js" type="text/javascript"></script>
+  <script src="scripts/app.js" type="text/javascript"></script>
 </body>
 </html>
