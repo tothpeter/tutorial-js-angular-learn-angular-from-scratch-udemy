@@ -12,6 +12,7 @@
 
   <ul ng-class="{'hidden': !dirList.toggle}">
     <li ng-repeat="item in dirList.list | filter: search" ng-class="item.age > 29 ? 'over-thirty' : 'under-thirty'">
+      <img ng-src="{{item.img}}" alt="">
       {{item.name}} ({{item.age}})
     </li>
   </ul>
