@@ -10,7 +10,7 @@
   <button ng-hide="dirList.toggle" ng-click="dirList.toggle = true">Show Names</button>
   <button ng-if="dirList.toggle" ng-click="dirList.toggle = false">Hide Names</button>
 
-  <ul ng-class="{'hidden': !dirList.toggle}">
+  <ul ng-if="dirList.toggle" class="animate-if">
     <li ng-repeat="item in dirList.list | filter: search" ng-class="item.age > 29 ? 'over-thirty' : 'under-thirty'" ng-include="'templates/person.html'">
     </li>
   </ul>

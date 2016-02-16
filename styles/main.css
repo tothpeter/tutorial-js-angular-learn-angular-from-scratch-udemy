@@ -26,3 +26,24 @@ li img {
 .twitter {
   fill: red !important;
 }
+
+/* Animate */
+ul.ng-enter {
+  transition: .5s linear all;
+  opacity: 0;
+  transform: translateX(-50%);
+}
+
+ul.ng-enter.ng-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+ul.ng-leave {
+  transition: .5s linear all;
+  opacity: 1;
+}
+
+ul.ng-leave.ng-leave-active {
+  opacity: 0;
+}
